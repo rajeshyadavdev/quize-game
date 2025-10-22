@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Quiz Game</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  <div class="container">
+
+    <!-- Start Screen -->
+    <div class="screen active" id="start-screen">
+      <h1>Learn With Rajesh Yadav!</h1>
+      <p>Test your knowledge with these fun questions</p>
+      <div class="user_name"> <input type="text" name="name" id="name" placeholder="Please Enter Your Name" required>
+        <div class="emptyName">Please Enter Your Name..</div>
+      </div>
+      <button id="start-btn">Start Quiz</button>
+    </div>
+
+    <!-- Quiz Screen -->
+    <div class="screen" id="quiz-screen">
+      <div class="quiz-header">
+        <h2 id="question-text">Question goes here</h2>
+        <div class="quiz-info">
+          <p>Question <span id="current-question">1</span> of <span id="total-question">5</span></p>
+          <p>Score <span id="score">0</span></p>
+        </div>
+      </div>
+
+      <!-- Answers -->
+      <div class="answer-container" id="answer-container"></div>
+
+      <!-- Progress Bar -->
+      <div class="progress-bar">
+        <div class="progress" id="progress"></div>
+      </div>
+    </div>
+
+    <!-- Result Screen -->
+    <div class="screen" id="result-screen">
+      <h1>Quiz Results</h1>
+      <div class="result-info">
+        <p>Your score <span id="final-score">0</span> out of <span id="max-score">5</span></p>
+        <div id="result-message">Good Job!</div>
+      </div>
+      <button id="restart-btn">Restart Quiz</button>
+    </div>
+
+  </div>
+
+  <script src="script.js"></script>
+</body>
+
+</html>
